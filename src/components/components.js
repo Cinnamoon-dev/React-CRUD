@@ -1,8 +1,14 @@
 import React from "react";
-// import {Table} from 'reactstrap';
 import lapis from '../assets/icons/lapis/lapis.png';
 import lixeira from '../assets/icons/lixeira/lixeira.png';
-import { contacts } from '../App';
+
+let contacts = [
+    {id: 1, nome: 'Ajalmar', fone: '8888-7777', ações: ''},
+    {id: 2, nome: 'Claudia', fone: '9999-4444',ações: ''},
+    {id: 3, nome: 'Betinho', fone: '9876-3333',ações: ''},
+    {id: 4, nome: 'Ana Julia', fone: '9855-3333',ações: ''}, 
+    {id: 5, nome: 'Bia Julia', fone: '9755-3333',ações: ''}  
+ ];
 
 export class AddButton extends React.Component {
     constructor(props){
@@ -16,12 +22,12 @@ export class AddButton extends React.Component {
         event.preventDefault();
         const name = event.target.elements.name.value;
         const phone = event.target.elements.phone.value;
+        
         contacts.push({id: contacts[contacts.length - 1].id + 1, nome: name, fone: phone, ações: ''});
-
         this.setState({estado: false});
     }
 
-    onClick() { // Olhar como usa o prevState
+    onClick() {
         this.setState({estado: true});
     }
 
@@ -57,7 +63,7 @@ function IsAction(props)
 }
 
 class ImageEdit extends React.Component
-{   //avaliar a ideia de um id para cada imagem.
+{
     constructor(props){
         super(props);
         this.state = {allObj: contacts, edit: false, index: null, editObject: {}, nomeForm: '', foneForm: ''};
@@ -69,8 +75,7 @@ class ImageEdit extends React.Component
         this.onChangeFoneForm = this.onChangeFoneForm.bind(this);
     }
 
-    ClickButtonDelete(){ // classe responsável por editar cada campo, passar uma key para o button.
-        // Vamos usar a lista inteira aqui para deletar um índice
+    ClickButtonDelete(){ // método responsável por deletar cada campo
         for (let i = 0; i < contacts.length; i++) {
             if( this.props.id === contacts[i].id){
                 contacts.splice(i, 1);
@@ -79,7 +84,7 @@ class ImageEdit extends React.Component
         }
     }
 
-    ClickButtonEdit(){ // classe responsável por apagar cada campo, passar uma key para o button.
+    ClickButtonEdit(){ // método responsável por editar cada campo
         // Vamos usar só um indice aqui para editar
         // Vamos modificar apenas editObject aqui 
         let editObject;
@@ -110,13 +115,8 @@ class ImageEdit extends React.Component
         const name = event.target.elements.name.value;
         const phone = event.target.elements.phone.value;
 
-
-        // this.setState({editObject: {id: '1', nome: name, fone: phone, ações: ''} , edit: false});
         this.setState({edit: false});
         contacts[this.state.index] =  {id: this.props.id, nome: name, fone: phone, ações: ''};
-        console.log(this.state.editObject);
-        console.log(contacts);
-        console.log(this.state.index);
     }
 
     render() { 
@@ -146,7 +146,6 @@ class ImageEdit extends React.Component
 
 function Coluna(props)
 {   // montando o cabeçalho da tabela.
-    
     let column = props.campos.map( (campo) =>  <th>{campo}</th> );
 
     return (
@@ -166,8 +165,6 @@ function LinhaDeDados(props)
             <IsAction value={props.objeto[key]} keys_t={key} id={id}/> )
     );
 
-    //let element_formated = props.objeto.forEach( (key, value) => <ImageEdit key={key} value={value}/>)
-
     return (
         <tr>{element_formated}</tr>
     );
@@ -175,7 +172,6 @@ function LinhaDeDados(props)
   
 export class Tabela extends React.Component {
     // classe responsavel por renderizar toda a tabela.
-
     constructor(props){
         super(props);
         this.state = {allObj: contacts, edit: false};
@@ -207,17 +203,15 @@ export class Tabela extends React.Component {
         }
         
         return (
-            <>
-                <table className="ConteudoTabela">
-                    <thead>
-                        <Coluna campos={colunas}/>
-                    </thead>
-                    
-                    <tbody>
-                        {fields}
-                    </tbody>
-                </table>
-            </>
+            <table className="ConteudoTabela">
+                <thead>
+                    <Coluna campos={colunas}/>
+                </thead>
+                
+                <tbody>
+                    {fields}
+                </tbody>
+            </table>
         );
     }
 }
