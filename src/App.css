@@ -1,3 +1,13 @@
+#buttonPen{
+  max-width: 30px;
+  max-height: 30px;
+}
+
+#buttonTrash{
+  max-width: 30px;
+  max-height: 30px;
+}
+
 .ConteudoTabela{
   margin: auto;
   width: 30%;
@@ -9,8 +19,8 @@
 }
 
 .NavBar{
-  background-color: #333;
-  color: whitesmoke;
+  background-color: darkblue;
+  color: azure;
   padding: 20px;
   margin-bottom: 20px;
   position: static;
@@ -28,12 +38,14 @@
   border: 2px #000000 solid;
   margin: 5px 10px 10px 0px;
   background-color: white;
+  border-radius: 7px;
 }
 
 .actButtonLixeira{
   border: 2px #000000 solid;
   margin: 5px 0px 10px 0px;
   background-color: white;
+  border-radius: 7px;
 }
 
 .actButton:hover{

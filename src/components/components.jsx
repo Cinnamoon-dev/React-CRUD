@@ -2,7 +2,7 @@ import React from "react";
 import lapis from '../assets/icons/lapis/lapis.png';
 import lixeira from '../assets/icons/lixeira/lixeira.png';
 
-let contacts = [
+export let contacts = [
     {id: 1, nome: 'Ajalmar', fone: '8888-7777', ações: ''},
     {id: 2, nome: 'Claudia', fone: '9999-4444',ações: ''},
     {id: 3, nome: 'Betinho', fone: '9876-3333',ações: ''},
@@ -125,8 +125,8 @@ class ImageEdit extends React.Component
             {
                 !this.state.edit &&
                 <>
-                    <button onClick={() => this.ClickButtonEdit()} className='actButtonLapis' ><img alt='lapis' type='image' src={lapis} /></button>
-                    <button onClick={this.ClickButtonDelete} className='actButtonLixeira'><img alt='lixeira' type='image' src={lixeira} /></button>
+                    <button onClick={() => this.ClickButtonEdit()} className='actButtonLapis' ><img alt='lapis' type='image' id="buttonPen" src={lapis} /></button>
+                    <button onClick={this.ClickButtonDelete} className='actButtonLixeira'><img alt='lixeira' type='image' id="buttonTrash" src={lixeira} /></button>
                 </>
             }
 
@@ -169,7 +169,7 @@ function LinhaDeDados(props)
         <tr>{element_formated}</tr>
     );
 }
-  
+
 export class Tabela extends React.Component {
     // classe responsavel por renderizar toda a tabela.
     constructor(props){

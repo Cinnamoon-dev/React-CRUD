@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tabela, AddButton } from './components/components';
+import {contacts} from "./components/components";
 import './App.css';
 
 function App() {
@@ -9,8 +10,9 @@ function App() {
         <div className='NavBarContainer'>Tabela</div>
       </div>
 
+      <Tabela />
+
       <div>
-        <Tabela />
         <AddButton />
       </div>
     </div>
