@@ -1,3 +1,9 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 #buttonPen{
   max-width: 30px;
   max-height: 30px;
@@ -10,40 +16,71 @@
 
 .ConteudoTabela{
   margin: auto;
-  width: 30%;
-  box-sizing: border-box;
-  border-color: #000000;
-  border-width: 2px;
-  border-style: solid;
+  width: 35%;
+  border: #333 1.5px solid;
   text-align: center;
 }
 
 .NavBar{
-  background-color: darkblue;
-  color: azure;
+  background: linear-gradient(45deg,#c5a4a4,darkblue,coral);
+  box-shadow: 0px 1px 8px #333;
+  color: whitesmoke;
   padding: 20px;
   margin-bottom: 20px;
-  position: static;
-  width: 100%;
 }
 
 .NavBarContainer{
-  width: 100%;
-  padding-left:30px;
+  position: relative;
   text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.DrawerContainer{
+  width: 240px;
+  height: 92%;
+  padding: 25px;
+  
+  background-color: whitesmoke;
+  position: absolute;
+}
+
+#DrawerFigura{
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.DrawerExitFig{
+  height: 40px;
+  width: 40px;
+  margin-left: 100%;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 30px;
+}
+
+.DrawerExitFig:hover{
+  opacity: 95%;
+}
+
+.DrawerEnterFig{
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 7px;
+
+}
+
+.DrawerHeader{
+  background-color: burlywood;
+  padding: 20px;
+  text-align: center;
+  height: 25px;
 }
 
 .actButtonLapis{
-  border: 2px #000000 solid;
-  margin: 5px 10px 10px 0px;
-  background-color: white;
-  border-radius: 7px;
-}
-
-.actButtonLixeira{
-  border: 2px #000000 solid;
-  margin: 5px 0px 10px 0px;
+  border: 1px #000000 solid;
+  margin: 5px 5px 5px 10px;
   background-color: white;
   border-radius: 7px;
 }
@@ -54,10 +91,6 @@
 
 .formStyle{
   margin: 5px 0px 10px 35%;
-}
-
-.inputTabela {
-  width: 40%;
 }
 
 .newUser{

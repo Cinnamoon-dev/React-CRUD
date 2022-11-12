@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import lapis from '../assets/icons/lapis/lapis.png';
 import lixeira from '../assets/icons/lixeira/lixeira.png';
 
@@ -126,7 +126,7 @@ class ImageEdit extends React.Component
                 !this.state.edit &&
                 <>
                     <button onClick={() => this.ClickButtonEdit()} className='actButtonLapis' ><img alt='lapis' type='image' id="buttonPen" src={lapis} /></button>
-                    <button onClick={this.ClickButtonDelete} className='actButtonLixeira'><img alt='lixeira' type='image' id="buttonTrash" src={lixeira} /></button>
+                    <button onClick={this.ClickButtonDelete} className='actButtonLapis'><img alt='lixeira' type='image' id="buttonTrash" src={lixeira} /></button>
                 </>
             }
 
@@ -134,7 +134,9 @@ class ImageEdit extends React.Component
                 this.state.edit &&
                 <form onSubmit={this.handleSubmit}>
                     <input className="inputTabela" type="text" name="name" onChange={this.onChangeNameForm} value={this.state.nomeForm} placeholder="Enter Name"/>
+                    <br/>
                     <input className="inputTabela" type="text" name="phone" onChange={this.onChangeFoneForm} value={this.state.foneForm} placeholder="Enter Phone"/>
+                    <br/>
                     <button type="Submit">EDIT</button>
                 </form>
             }
@@ -160,10 +162,7 @@ function LinhaDeDados(props)
     let keys = Object.keys(props.objeto);
     let element_formated = [];
 
-    keys.forEach( (key) => 
-        element_formated.push( 
-            <IsAction value={props.objeto[key]} keys_t={key} id={id}/> )
-    );
+    keys.forEach( (key) => element_formated.push(  <IsAction value={props.objeto[key]} keys_t={key} id={id}/> ) );
 
     return (
         <tr>{element_formated}</tr>
@@ -197,7 +196,7 @@ export class Tabela extends React.Component {
         let fields = []; // é cada linha de dados.
         let colunas = Object.keys(this.state.allObj[0]); // pegando todas as colunas da tabela.
         
-        if(this.state.allObj)// definindo linhas de dados.
+        if(this.state.allObj) // definindo linhas de dados.
         {
             this.state.allObj.forEach( (objeto) => fields.push( <LinhaDeDados objeto={objeto} />)); 
         }
