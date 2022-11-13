@@ -26,11 +26,12 @@
   box-shadow: 0px 1px 8px #333;
   color: whitesmoke;
   padding: 20px;
+  text-align: center;
   margin-bottom: 20px;
 }
 
 .NavBarContainer{
-  position: relative;
+  position: absolute;
   text-align: center;
 }
 
@@ -43,11 +44,6 @@
   position: absolute;
 }
 
-#DrawerFigura{
-  width: 40px;
-  height: 40px;
-  position: relative;
-}
 
 .DrawerExitFig{
   height: 40px;
@@ -62,13 +58,19 @@
   opacity: 95%;
 }
 
-.DrawerEnterFig{
-  height: 40px;
-  width: 40px;
+.DrawerEnter{
   position: absolute;
-  margin-left: 20px;
-  margin-top: 7px;
+  padding: 0px;
+}
 
+.DrawerEnterFig{
+  background-color: transparent;
+  margin-left: 30px;
+  margin-top: -10px;
+}
+
+.DrawerEnterFig:hover{
+  opacity: 50%;
 }
 
 .DrawerHeader{

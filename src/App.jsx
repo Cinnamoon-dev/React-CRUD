@@ -3,13 +3,16 @@ import { Tabela, AddButton} from './components/components';
 import { Drawer } from './components/drawer';
 import './App.css';
 
-function App() {
+export const App = () => {
+  /* o state do drawer deve ficara aqui para que possa ser desvinculado do componente */
+
+  
   return (
     <div className='pagina'>
 
-      <Drawer />
       <div className='NavBar'>
-        <div className='NavBarContainer'>Tabela</div>
+        <Drawer />
+        <h2>Tabela</h2>
       </div>
 
       <Tabela />
