@@ -36,7 +36,7 @@ export const DrawerContainer = (props) => {
                             alt=''
                             src={HomeDrawer}
                             className='HomeDrawerIcon'
-                            onClick=''
+                            onClick={() => alert('clique home')}
                             />
                             <p>home</p>
                         </div>
@@ -46,7 +46,7 @@ export const DrawerContainer = (props) => {
                             alt=''
                             src={Contacts}
                             className='listItemIcon'
-                            onClick=''
+                            onClick={() => alert('clique Contacts')}
                             />
                             <p>contatos</p>
                         </div>
@@ -56,7 +56,7 @@ export const DrawerContainer = (props) => {
                             alt=''
                             src={Instagram}
                             className='listItemIcon'
-                            onClick=''
+                            onClick={() => alert('clique Instagram')}
                             />
                             <p>redes sociais</p>
                         </div>
