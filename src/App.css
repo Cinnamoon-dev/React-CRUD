@@ -22,7 +22,7 @@
 }
 
 .NavBar{
-  background: linear-gradient(45deg,#c5a4a4,darkblue,coral);
+  background: linear-gradient(45deg,rgb(82, 8, 82),rgb(21, 70, 75),rgb(99, 49, 31));
   box-shadow: 0px 1px 8px #333;
   color: whitesmoke;
   padding: 20px;
@@ -35,50 +35,6 @@
   text-align: center;
 }
 
-.DrawerContainer{
-  width: 240px;
-  height: 92%;
-  padding: 25px;
-  
-  background-color: whitesmoke;
-  position: absolute;
-}
-
-
-.DrawerExitFig{
-  height: 40px;
-  width: 40px;
-  margin-left: 100%;
-  background-color: whitesmoke;
-  border: none;
-  border-radius: 30px;
-}
-
-.DrawerExitFig:hover{
-  opacity: 95%;
-}
-
-.DrawerEnter{
-  position: absolute;
-  padding: 0px;
-}
-
-.DrawerEnterFig{
-  background-color: transparent;
-  margin-left: 30px;
-  margin-top: -10px;
-}
-
-.DrawerEnterFig:hover{
-  opacity: 50%;
-}
-
-.DrawerHeader{
-  background-color: burlywood;
-  padding: 20px;
-  text-align: center;
-  height: 25px;
-}
 
 .actButtonLapis{
   border: 1px #000000 solid;
@@ -110,3 +66,4 @@
   background-color: white;
   padding-left: 5px;
 }
+

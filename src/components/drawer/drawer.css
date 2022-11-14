@@ -1,0 +1,109 @@
+.DrawerContainer{
+    width: 240px;
+    height: 92%;
+    padding: 25px;
+    
+    background-color: whitesmoke;
+    position: absolute;
+    animation: aparecer 0.2s ease-out;
+}
+  
+.DrawerExitFig{
+    height: 40px;
+    width: 40px;
+    margin-left: 100%;
+    position: relative;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 10px;
+}
+  
+.DrawerExitFig:hover{
+    opacity: 95%;
+}
+  
+.DrawerEnter{
+    position: absolute;
+    padding: 0px;
+}
+  
+.DrawerEnterFig{
+    background-color: transparent;
+    margin-left: 30px;
+    margin-top: -5px;
+    height: 40px;
+    width: 40px;
+}
+  
+.DrawerEnterFig:hover{
+    opacity: 50%;
+}
+  
+.DrawerHeader{
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 2px 2px purple;
+    text-align: center;
+    height: 25px;
+}
+
+.listItensDrawer{
+    padding: 0px;
+    margin-top: -15px;
+    position: relative;
+}
+
+.itemList{
+    box-shadow: 2px 2px purple;
+    background-color: #333;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.itemList p {
+    color: white;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: 20%;
+}
+
+.HomeDrawerIcon{
+    width: 40px;
+    height: 40px;
+}
+
+.listItemIcon{
+    height: 40px;
+    width: 40px;
+}
+
+.LogoutDrawer{
+    position: absolute;
+    background-color: transparent;
+    margin-top: 95%;
+    margin-left: 85%;
+}
+
+.LogoutDrawer p{
+    color: black;
+    position: absolute;
+    margin-top: -30px;
+    margin-left: -20%;
+}
+
+
+@keyframes aparecer {
+    0%{
+      left: -30%;
+      opacity: 0;
+      pointer-events: none;
+    }
+    100%{
+      left: 0%;
+      opacity: 100%;
+      pointer-events: all;
+    }
+  }
