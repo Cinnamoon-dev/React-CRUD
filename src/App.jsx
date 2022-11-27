@@ -4,6 +4,7 @@ import Home from './components/Home/index';
 import Contatos from './components/Tabela/index';
 import './components/drawer/drawer.css'
 import './App.css';
+import NotFound from './components/Error';
 
 
 export const App = () => {
@@ -12,6 +13,7 @@ export const App = () => {
       <Routes>
         <Route path='/Home' element={<Home />} />
         <Route path='/Contatos' element={<Contatos />} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
   );  
 }
