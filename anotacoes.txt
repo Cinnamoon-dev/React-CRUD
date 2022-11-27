@@ -26,3 +26,5 @@ CREATE - CRUD
     Solução Escolhida:
         Subir o nível do Botão até Tabela (? - indefinido)
         <Tabela/> não renderiza mais apenas a Tabela. Ela vai conter também, externo à tabela, um formulário que ficará vísivel ou invisível usando uma renderização condicional
+
+Dia 27- inseri a biblioteca ReactIcons e ReactRouter

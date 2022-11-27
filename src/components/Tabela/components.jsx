@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import lapis from '../assets/icons/lapis/lapis.png';
-import lixeira from '../assets/icons/lixeira/lixeira.png';
+import React from "react";
+import lapis from '../../assets/icons/lapis/lapis.png';
+import lixeira from '../../assets/icons/lixeira/lixeira.png';
 
 export let contacts = [
     {id: 1, nome: 'Ajalmar', fone: '8888-7777', ações: ''},

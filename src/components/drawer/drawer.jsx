@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import drawerFig from '../../assets/icons/drawer/menuDrawer.png'
 import arrowBack from '../../assets/icons/drawer/backArrow.png'
 import HomeDrawer from '../../assets/icons/drawer/home.png'
 import Contacts from '../../assets/icons/drawer/contactsDrawer.png'
 import Instagram from '../../assets/icons/drawer/instagram.png'
+import { Link } from 'react-router-dom';
 
 
 export const DrawerContainer = (props) => {
@@ -36,9 +37,9 @@ export const DrawerContainer = (props) => {
                             alt=''
                             src={HomeDrawer}
                             className='HomeDrawerIcon'
-                            onClick={() => alert('clique home')}
+                            onClick={() => alert('Clique no nome Home')}
                             />
-                            <p>home</p>
+                            <Link to='/Home'>Home</Link>
                         </div>
                         <div className='itemList'>
                             <input 
@@ -48,7 +49,7 @@ export const DrawerContainer = (props) => {
                             className='listItemIcon'
                             onClick={() => alert('clique Contacts')}
                             />
-                            <p>contatos</p>
+                            <Link to='/Contatos'>Contatos</Link>
                         </div>
                         <div className='itemList'>
                             <input 
