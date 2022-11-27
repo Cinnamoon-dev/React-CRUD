@@ -5,6 +5,8 @@ import HomeDrawer from '../../assets/icons/drawer/home.png'
 import Contacts from '../../assets/icons/drawer/contactsDrawer.png'
 import Instagram from '../../assets/icons/drawer/instagram.png'
 import { Link } from 'react-router-dom';
+import { AiOutlineHome, AiOutlinePhone } from 'react-icons/ai';
+import { FaInstagram } from 'react-icons/fa'
 
 
 export const DrawerContainer = (props) => {
@@ -19,6 +21,7 @@ export const DrawerContainer = (props) => {
             {
                 status && 
                 <div className='DrawerContainer'>
+
                     <div className='DrawerHeader'>
                         <label>Container do Drawer</label>
                     </div>
@@ -31,35 +34,17 @@ export const DrawerContainer = (props) => {
                     onClick={ () => handleClose()}/>
                     
                     <div className='listItensDrawer'>
+                        
                         <div className='itemList'>
-                            <input 
-                            type='image' 
-                            alt=''
-                            src={HomeDrawer}
-                            className='HomeDrawerIcon'
-                            onClick={() => alert('Clique no nome Home')}
-                            />
-                            <Link to='/Home'>Home</Link>
+                            <Link to='/Home'>Home<AiOutlineHome/></Link>
                         </div>
+                        
                         <div className='itemList'>
-                            <input 
-                            type='image' 
-                            alt=''
-                            src={Contacts}
-                            className='listItemIcon'
-                            onClick={() => alert('clique Contacts')}
-                            />
-                            <Link to='/Contatos'>Contatos</Link>
+                            <Link to='/Contatos'>Contatos<AiOutlinePhone/></Link>
                         </div>
+
                         <div className='itemList'>
-                            <input 
-                            type='image' 
-                            alt=''
-                            src={Instagram}
-                            className='listItemIcon'
-                            onClick={() => alert('clique Instagram')}
-                            />
-                            <p>redes sociais</p>
+                            <Link to='/'>Redes Sociais<FaInstagram/></Link>
                         </div>
                     </div>
                 </div>

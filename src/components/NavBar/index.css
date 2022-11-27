@@ -1,0 +1,13 @@
+.NavBar{
+    background: linear-gradient(45deg,rgb(82, 8, 82),rgb(21, 70, 75),rgb(99, 49, 31));
+    box-shadow: 0px 1px 8px #333;
+    color: whitesmoke;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .NavBarContainer{
+    position: absolute;
+    text-align: center;
+  }

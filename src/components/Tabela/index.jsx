@@ -1,24 +1,16 @@
 import React, {useState} from "react";
 import { DrawerContainer, Drawer} from "../drawer/drawer";
+import NavBar from "../NavBar";
 import { Tabela, AddButton} from "./components";
 
 
-const Contatos = () =>{
-    const [ open, setOpen ] = useState(false);
-  
+const Contatos = () =>{  
     return (
       <div className='pagina'>
-  
-        <DrawerContainer status={open} handleChangeStatus={setOpen}/>
-  
-        <div className='NavBar'>
-          <Drawer status={open} handleChangeStatus={setOpen}/>
-          <h2>Tabela</h2>
-        </div>
+        <NavBar title={'Tabela'}/>
   
         <Tabela />
         <AddButton />
-        
       </div>
     );
 }

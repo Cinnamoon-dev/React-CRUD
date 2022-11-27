@@ -58,16 +58,38 @@
 .itemList{
     box-shadow: 2px 2px purple;
     background-color: #333;
+    padding: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
-    padding: 5px;
+    font-size: 3rem;
+    padding: 10px;
+    display: flex;
+    font-size: 1.5rem;
+}
+.itemList a:link{
+    text-decoration: none;
 }
 
-.itemList p {
+.itemList a:visited{
     color: white;
+    text-decoration: none;
+}
+
+.itemList a:hover{
+    text-decoration: none;
+    opacity: 40%;
+}
+
+.itemList #text{
+    margin-left: 10px;
+}
+
+.itemList svg{
     position: absolute;
-    margin-top: -30px;
-    margin-left: 20%;
+    display: flex;
+    margin-top: -25px;
+    margin-left: 180px;
+    border-radius: 5px;
 }
 
 .HomeDrawerIcon{
