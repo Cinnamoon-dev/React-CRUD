@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { DrawerContainer, Drawer } from '../drawer/drawer';
+import { DrawerContainer, Drawer } from '../drawer/drawer'
 import './index.css'
 
 

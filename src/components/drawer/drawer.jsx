@@ -1,11 +1,8 @@
-import React from 'react';
+import React from 'react'
 import drawerFig from '../../assets/icons/drawer/menuDrawer.png'
 import arrowBack from '../../assets/icons/drawer/backArrow.png'
-import HomeDrawer from '../../assets/icons/drawer/home.png'
-import Contacts from '../../assets/icons/drawer/contactsDrawer.png'
-import Instagram from '../../assets/icons/drawer/instagram.png'
-import { Link } from 'react-router-dom';
-import { AiOutlineHome, AiOutlinePhone } from 'react-icons/ai';
+import { Link } from 'react-router-dom'
+import { AiOutlineHome, AiOutlinePhone } from 'react-icons/ai'
 import { FaInstagram } from 'react-icons/fa'
 
 

@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-import NavBar from "../NavBar";
-import { Tabela, AddButton} from "./components";
+import React from "react"
+import NavBar from "../NavBar"
+import { Tabela, AddButton} from "./components"
 
 
 const Contatos = () =>{  
     return (
       <div className='pagina'>
-        <NavBar title={'Tabela'}/>
+        <NavBar title={'Contatos'}/>
         <Tabela />
         <AddButton />
       </div>

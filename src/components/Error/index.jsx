@@ -1,11 +1,10 @@
 import React from 'react'
+import NavBar from '../NavBar'
 
 const NotFound = () => {
   return (
     <>
-        <div className='centerError'>
-            <h1>Não Encontramos a Pagina </h1>
-        </div>
+        <NavBar title={"Not Found"}/>
     </>
   )
 }
