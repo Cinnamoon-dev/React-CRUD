@@ -9,7 +9,7 @@ export let contacts = [
     {id: 4, nome: 'Ana Julia', fone: '9855-3333',ações: ''}, 
     {id: 5, nome: 'Bia Julia', fone: '9755-3333',ações: ''}  
  ];
-
+ 
 export class AddButton extends React.Component {
     constructor(props){
         super(props);
@@ -54,8 +54,7 @@ export class AddButton extends React.Component {
     }
 }
 
-function IsAction(props)
-{
+const IsAction = (props) => {
     let id = props.id;
     let campo = props.keys_t;
 
@@ -146,25 +145,22 @@ class ImageEdit extends React.Component
     }
 }
 
-function Coluna(props)
-{   // montando o cabeçalho da tabela.
-    let column = props.campos.map( (campo) =>  <th>{campo}</th> );
+const Coluna = (props) => {
+    let column = props.campos.map( (campo) => <th>{campo}</th>);
 
-    return (
+    return(
         <tr>{column}</tr>
     );
 }
-  
-function LinhaDeDados(props)
-{   // passando cada objeto
 
+const LinhaDeDados = (props) => {
     let id = props.objeto.id;
     let keys = Object.keys(props.objeto);
     let element_formated = [];
 
     keys.forEach( (key) => element_formated.push(  <IsAction value={props.objeto[key]} keys_t={key} id={id}/> ) );
 
-    return (
+    return(
         <tr>{element_formated}</tr>
     );
 }
