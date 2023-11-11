@@ -2,8 +2,6 @@ import React from 'react'
 import drawerFig from '../../assets/icons/drawer/menuDrawer.png'
 import arrowBack from '../../assets/icons/drawer/backArrow.png'
 import { Link } from 'react-router-dom'
-import { AiOutlineHome, AiOutlinePhone } from 'react-icons/ai'
-import { FaInstagram } from 'react-icons/fa'
 
 
 export const DrawerContainer = (props) => {
@@ -33,15 +31,15 @@ export const DrawerContainer = (props) => {
                     <div className='listItensDrawer'>
                         
                         <div className='itemList'>
-                            <Link to='/Home'>Home<AiOutlineHome/></Link>
+                            <Link to='/Home'>Home</Link>
                         </div>
                         
                         <div className='itemList'>
-                            <Link to='/Contatos'>Contatos<AiOutlinePhone/></Link>
+                            <Link to='/Contatos'>Contatos</Link>
                         </div>
 
                         <div className='itemList'>
-                            <Link to='/'>Redes Sociais<FaInstagram/></Link>
+                            <Link to='/'>Redes Sociais</Link>
                         </div>
                     </div>
                 </div>
